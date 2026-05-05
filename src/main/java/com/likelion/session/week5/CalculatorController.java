@@ -17,6 +17,16 @@ public class CalculatorController {
         return request.getNumber1() * request.getNumber2();
     }
 
+    @PostMapping("/divide")
+    public int divideTwoNumbers(@RequestBody CalculatorDivideRequest request){
+        return request.getNumber1() / request.getNumber2();
+    }
+
+    @PostMapping("/subtract")
+    public int divideTwoNumbers(@RequestBody CalculatorSubtractRequest request){
+        return request.getNumber1() - request.getNumber2();
+    }
+
     @GetMapping("/add")
     public int addTwoNumbers(CalculatorAddRequest request) {
         return request. getNumber1() + request. getNumber2();
